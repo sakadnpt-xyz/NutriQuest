@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Piring Seimbang</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&amp;family=Fraunces:wght@700;800&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<div class="wrap">
+<header><p class="eyebrow">Petualangan makan sehat</p><h1>Piring Seimbang</h1><p class="mut">Pilih teman bermain, lalu susun makanan Indonesia yang baik untuk tubuh!</p></header>
+
+<section id="start" class="card" style="max-width:640px;margin:16px auto 0">
+<h2 style="text-align:center">Siapa teman makanmu?</h2>
+<p class="mut" style="text-align:center">Misi: lewati 4 waktu makan (sarapan sampai makan malam) dan penuhi kebutuhan kalorinya!</p>
+<div class="pick">
+<button class="cc" data-g="boy" aria-pressed="false"><span class="sv" id="sb"></span><b>Melvin</b><small>Melon laki-laki · 11 th · 36 kg</small></button>
+<button class="cc" data-g="girl" aria-pressed="false"><span class="sv" id="sg"></span><b>Meli</b><small>Melon perempuan · 11 th · 38 kg</small></button>
+</div>
+<p id="warn" role="status" hidden style="text-align:center;font-weight:700;color:#c2562a">Pilih Melvin atau Meli terlebih dahulu.</p>
+<div style="text-align:center;margin-top:18px"><button class="btn" id="go">Mulai bermain</button></div>
+</section>
+
+<div id="hud" class="hud" hidden></div>
+<div id="game" class="game" hidden>
+<div class="col">
+<section class="card t1">
+<div class="chr"><button id="av" class="av" aria-label="Ketuk untuk ngobrol"></button>
+<div id="bub" class="bub" aria-live="polite"><p id="say" class="say"></p><p id="note" class="note"></p></div></div>
+<div class="stats">
+<div class="m"><label>⚡ Energi <span id="enT"></span></label><div class="bar"><i id="enB"></i></div></div>
+<div class="m"><label>❤️ Kesehatan <span id="hpT"></span></label><div class="bar"><i id="hpB"></i></div></div>
+</div>
+<span id="status" class="status"></span>
+<div class="prof" id="prof"></div>
+<div class="kcw"><div class="kcl"><b>🔥 Kalori piring</b><span id="kcT"></span></div><div class="kbar"><i id="kcB"></i><s></s></div><p id="kcN" class="note"></p></div>
+<div style="margin-top:10px"><button id="water" class="btn ghost">💧 Minum air <span id="wN">0</span>/8</button></div>
+</section>
+<section class="card t2">
+<h2>🍽️ Piring pilihanmu</h2>
+<div class="table"><div id="plate" class="plate" aria-label="Piring: jatuhkan makanan di sini"></div></div>
+<div id="chips" class="chips"></div>
+<div id="res" class="res" hidden></div>
+<div id="nx" class="acts" hidden><button id="redo" class="btn ghost">🔁 Ulangi sesi</button><button id="next" class="btn">Lanjut ➡️</button></div>
+<div class="acts"><button id="eat" class="btn">Makan sekarang! 🍽️</button><button id="clear" class="btn ghost">Kosongkan piring</button><button id="swap" class="btn ghost">Ganti karakter</button></div>
+</section>
+</div>
+<section class="card t3">
+<h2>🛒 Pilih makanan</h2>
+<p class="mut">Seret ke piring atau ketuk. Ketuk makanan di piring untuk menghapusnya.</p>
+<input id="q" type="search" placeholder="🔎 Cari makanan..." aria-label="Cari makanan">
+<div class="tabs" id="tabs"></div>
+<div class="foods" id="foods"></div>
+</section>
+</div>
+<div id="rp" class="rp" hidden><div class="card"><div id="rpB"></div><div class="acts"><button id="again" class="btn">Main lagi 🔁</button><button id="rpx" class="btn ghost">Tutup</button></div></div></div>
+<p class="foot">Makan beragam dan batasi makanan tinggi gula, garam, dan minyak.</p>
+</div>
+
+<script src="game.js"></script>
+</body></html>
